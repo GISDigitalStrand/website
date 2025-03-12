@@ -3,10 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>GIS STEAM Expo - Digital Strand</title>
+    <style>
+        :root {
+            --primary: #4b5faa;
+            --secondary: #8bc34a;
+            --accent: #ff9800;
+            --text: #333;
+            --light: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+        
+        .logo {
+            width: 80px;
+            margin-bottom: 1rem;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+        }
+        
+        .event-details {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .event-details p {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .intro h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stations {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .station {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .station:hover {
+            transform: translateY(-5px);
+        }
+        
+        .station-icon {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .green-screen { background-color: #689f38; }
+        .vr-experience { background-color: #3949ab; }
+        .photo-booth { background-color: #ef6c00; }
+        .sphero { background-color: #0288d1; }
+        .local-stalls { background-color: #7b1fa2; }
+        .maker-space { background-color: #ef5350; }
+        
+        .station-content {
+            padding: 1.5rem;
+        }
+        
+        .station h3 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .location {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact {
+            margin-top: 1rem;
+        }
+        
+        .contact a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dotted white;
+        }
+        
+        @media (max-width: 768px) {
+            .stations {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .header-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">Digital Strand Website</h1>
+    <header>
+        <div class="header-content">
+            <img src="/api/placeholder/80/80" alt="Garden International School Logo" class="logo">
+            <h1>STEAM Expo</h1>
+            <p>Garden International School</p>
+            <p>Bringing Out The Best In You Since 1951</p>
+            
+            <div class="event-details">
+                <p>THURSDAY 17th APRIL 2025</p>
+                <p>10:30AM - 2:30PM, FOYER</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h2>Digital Strand Stations</h2>
+            <p>Welcome to the Digital Strand of our STEAM Expo! Explore innovative technologies and interactive experiences designed to inspire creativity, problem-solving, and engagement with STEAM concepts.</p>
+        </section>
+        
+        <section class="stations">
+            <div class="station">
+                <div class="station-icon green-screen">
+                    <span>📸</span>
+                </div>
+                <div class="station-content">
+                    <h3>Green Screen Photo Booth</h3>
+                    <div class="location">Location: Media Suite (Room 101)</div>
+                    <p>Step into our Green Screen Photo Booth and transport yourself anywhere in the world or beyond! Using chroma key technology, students will help you create memorable photos with custom backgrounds of your choice.</p>
+                    <p><strong>Activities:</strong> Take photos with friends against virtual backgrounds, learn about green screen technology, and receive digital copies of your photos.</p>
+                </div>
+            </div>
+            
+            <div class="station">
+                <div class="station-icon vr-experience">
+                    <span>🥽</span>
+                </div>
+                <div class="station-content">
+                    <h3>VR Experience</h3>
+                    <div class="location">Location: Innovation Lab (Room 105)</div>
+                    <p>Immerse yourself in virtual worlds with our cutting-edge VR headsets. Experience educational simulations, explore impossible environments, and see how virtual reality is transforming learning.</p>
+                    <p><strong>Activities:</strong> Try various educational VR applications, explore 3D models of scientific concepts, and experience virtual field trips to historical sites and natural wonders.</p>
+                </div>
+            </div>
+            
+            <div class="station">
+                <div class="station-icon photo-booth">
+                    <span>📷</span>
+                </div>
+                <div class="station-content">
+                    <h3>Photo Booth</h3>
+                    <div class="location">Location: Main Foyer</div>
+                    <p>Capture the fun of the STEAM Expo at our themed Photo Booth! Strike a pose with scientific props, digital effects, and STEAM-themed accessories for a perfect memento of the day.</p>
+                    <p><strong>Activities:</strong> Take individual or group photos, choose from STEAM-themed digital overlays, and receive instant printed copies to take home.</p>
+                </div>
+            </div>
+            
+            <div class="station">
+                <div class="station-icon sphero">
+                    <span>🤖</span>
+                </div>
+                <div class="station-content">
+                    <h3>Coding Sphero Robots</h3>
+                    <div class="location">Location: Computer Lab (Room 103)</div>
+                    <p>Get hands-on with programming using Sphero robots! Learn the basics of coding while controlling these interactive spherical robots through mazes, challenges, and games.</p>
+                    <p><strong>Activities:</strong> Program Sphero robots to navigate obstacle courses, create geometric patterns, and participate in team challenges that demonstrate coding principles.</p>
+                </div>
+            </div>
+            
+            <div class="station">
+                <div class="station-icon local-stalls">
+                    <span>🔬</span>
+                </div>
+                <div class="station-content">
+                    <h3>Local STEAM Stalls</h3>
+                    <div class="location">Location: Exhibition Hall</div>
+                    <p>Connect with local STEAM organizations, businesses, and educational institutions showcasing their innovative projects, programs, and opportunities for students interested in STEAM fields.</p>
+                    <p><strong>Activities:</strong> Interact with local STEAM professionals, explore career opportunities, and discover local resources for continuing STEAM education outside of school.</p>
+                </div>
+            </div>
+            
+            <div class="station">
+                <div class="station-icon maker-space">
+                    <span>🛠️</span>
+                </div>
+                <div class="station-content">
+                    <h3>Maker Space</h3>
+                    <div class="location">Location: Design Lab (Room 107)</div>
+                    <p>Unleash your creativity in our dedicated Maker Space where innovation meets hands-on learning. Explore 3D printing, electronics, and digital fabrication while creating your own take-home projects.</p>
+                    <p><strong>Activities:</strong> Design 3D models for printing, build simple electronics circuits, and collaborate on maker challenges that combine digital and physical creation.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <h3>Garden International School STEAM Expo 2025</h3>
+        <p>Join us for a day of innovation, creativity, and hands-on learning!</p>
+        <div class="contact">
+            <p>For more information, contact: <a href="#">steamexpo@gardenschool.edu</a></p>
+            <p>© 2025 Garden International School. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
